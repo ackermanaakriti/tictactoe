@@ -3,22 +3,36 @@ import './App.css';
 import Square from './Square';
 import Board from './Board'
 
-function App(props) {
+
+function App() {
   
-  const arr= new Array(9).fill("hello");
-  const [square, setSquare] = useState(arr);
+  const [board, setSquare] = useState(Array(9).fill(null));
   const [xValue, updateXvalue]= useState(false);
-  const updateValue=(index)=>
+  const updateValue=(boxidx)=>
   {
-     
+    const updateBoard= board.map((value, idx)=>
+    {
+      if(idx===boxidx)
+      {
+        return xValue===true?'X':"O";
+      }
+      else{
+        return value;
+      }
+
+    })
+    setSquare(updateBoard);
+    updateXvalue(!xValue);
+ 
   };
+  
  
   
   return (
     <div className="App">
-      <Board>
+      <Board  board={board} onClick={updateValue}>
       
-   {square.map((curElm,i)=><Square onClick={updateValue(i)}/>)}
+ 
     </Board>
     </div>
   );

@@ -1,8 +1,14 @@
 import React from 'react'
+import Square from './Square'
 
-function Board(props) {
+function Board({board, onclick}) {
   return (
-    <div className='board' {...props}></div>
+    <div className='board' >
+      {board.map((value, idx)=>{
+        return <Square value={value} onClick={()=>onclick(idx)}/>
+      })}
+    </div>
+
   )
 }
 
