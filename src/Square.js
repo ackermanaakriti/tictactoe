@@ -4,7 +4,7 @@ import './sqaure.css'
 function Square() {
   return (
     
-        <span className='square'>hello</span>
+        <span className='square'></span>
     
   )
 }
