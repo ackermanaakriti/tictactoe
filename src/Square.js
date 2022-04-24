@@ -1,8 +1,11 @@
 import React from 'react'
+import './sqaure.css'
 
 function Square() {
   return (
-    <div ></div>
+    <div className='square-container' >
+        <span className='boxes'>hello</span>
+    </div>
   )
 }
 
