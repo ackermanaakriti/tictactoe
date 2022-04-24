@@ -1,7 +1,7 @@
 import React from 'react'
 import './sqaure.css'
 
-function Square() {
+function Square(props) {
   return (
     
         <span className='square'></span>
