@@ -3,9 +3,9 @@ import './sqaure.css'
 
 function Square() {
   return (
-    <div className='square-container' >
-        <span className='boxes'>hello</span>
-    </div>
+    
+        <span className='square'>hello</span>
+    
   )
 }
 

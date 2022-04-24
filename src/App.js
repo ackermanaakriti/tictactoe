@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import {useState} from 'react'
 import './App.css';
 import Square from './Square';
+import Board from './Board'
 
 function App() {
   
@@ -10,9 +11,10 @@ function App() {
   
   return (
     <div className="App">
+      <Board>
       
-      
-    {square.map(sqaures=><Square/>)}
+   {square.map(square=><Square/>)}
+    </Board>
     </div>
   );
 }

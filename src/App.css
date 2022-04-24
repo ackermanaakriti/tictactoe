@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.board
+{
+  margin:30vh;
+ 
+  border: 1px solid #000;
+  background: rgb(211, 113, 113);
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  
+}

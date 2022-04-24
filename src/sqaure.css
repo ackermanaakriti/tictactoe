@@ -1,22 +1,14 @@
-.square-container
+
+.square
 {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(3 auto);
-  width: 306px;
-  margin: 10px auto;
-  background-color: #11213a;
-  color: #04c0b2;
-}
-.boxes
-{ display: flex;
-  flex-direction: column;
     font-family: "Permanent Marker", cursive;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   box-shadow: 2px 2px 2px 2px #ecd7ba;
-  border: 2px solid #ecd7ba;
+  border: 2px solid #1a1005;
   cursor: pointer;
-  line-height: 100px;
+  margin:0px;
   font-size: 60px;
+  color:white;
+  box-sizing: border-box;
 }
