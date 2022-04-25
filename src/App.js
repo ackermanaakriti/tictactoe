@@ -1,28 +1,23 @@
 import {useState} from 'react'
 import './App.css';
-import Square from './Square';
+
 import Board from './Board'
 
 
 function App() {
   
-  const [board, setSquare] = useState(Array(9).fill(null));
-  const [xValue, updateXvalue]= useState(false);
-  const updateValue=(boxidx)=>
+  const [board, setSquare] = useState(Array(9).fill(""));
+  const [xValue, updateXvalue]= useState(true);
+  const updateValue=(idx)=>
   {
-    const updateBoard= board.map((value, idx)=>
-    {
-      if(idx===boxidx)
-      {
-        return xValue===true?'X':"O";
-      }
-      else{
-        return value;
-      }
-
-    })
-    setSquare(updateBoard);
-    updateXvalue(!xValue);
+   
+   let strings= Array.from(board);
+   strings[idx]=xValue?"X":"O";
+   setSquare(strings);
+   updateXvalue(!xValue);
+ 
+    
+    console.log('hello madafaka');
  
   };
   
